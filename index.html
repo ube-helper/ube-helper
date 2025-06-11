@@ -9,12 +9,45 @@
     header, footer { text-align: center; }
     h1 { color: #333; }
     section { background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 10px; }
+  
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: 0 auto 40px auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>宇部のちょこっと代行サービス</h1>
-    <p>土日祝限定｜山口県宇部市の「困った」をお手伝いします！</p>
+    <p>山口県宇部市の「困った」をお手伝いします！</p>
   </header>
 
   <section>
@@ -26,6 +59,7 @@
       <li>PC作業やお話相手</li>
       <li>その他ご相談ください</li>
     </ul>
+    <p><strong>対応時間：</strong>土日祝および平日18時以降(日中要相談)</p>
   </section>
 
   <section>
@@ -34,11 +68,17 @@
        宇部市内交通費無料</p>
   </section>
 
-  <section>
-    <h2>お問い合わせ</h2>
-    <p>メール: yourmail@example.com<br>
-       LINE公式アカウント準備中</p>
-  </section>
+
+<section>
+  <h2>お問い合わせ</h2>
+  <form action="https://formspree.io/f/myzjwzzb" method="POST">
+    <label>お名前:<br><input type="text" name="name" required></label><br><br>
+    <label>メールアドレス or 電話番号:<br>
+<input type="tel" name="_replyto" required></label><br><br>
+    <label>お問い合わせ内容:<br><textarea name="message" required></textarea></label><br><br>
+    <button type="submit">送信</button>
+  </form>
+</section>
 
   <footer>
     <p>© 2025 宇部のちょこっと代行サービス</p>
